@@ -521,7 +521,7 @@ public class RealPlayLayout extends ViewGroup implements SingleRealPlayOperateCa
     */
     public void deleteSingleRealPlay(View childView){
         int index = (int) childView.getTag();
-        Toast.makeText(getContext(),"删除预览窗口 index="+index, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(),"删除View index="+index, Toast.LENGTH_SHORT).show();
         SingleRealPlayView selView = (SingleRealPlayView) childView;
     }
 

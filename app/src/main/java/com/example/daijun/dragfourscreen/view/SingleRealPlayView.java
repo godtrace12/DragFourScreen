@@ -262,7 +262,7 @@ public class SingleRealPlayView extends RelativeLayout implements SurfaceHolder.
     }
 
     public void setCameraName(String cameraName) {
-        tvCamName.setText("cam" + cameraName);
+        tvCamName.setText("view" + cameraName);
     }
 
     public void setUiSelected(){
@@ -294,11 +294,11 @@ public class SingleRealPlayView extends RelativeLayout implements SurfaceHolder.
             super.handleMessage(msg);
             switch (msg.what) {
                 case MSG_SURFACEVIEW_CLICK:
-                    Toast.makeText(getContext(), "预览控件单击！", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "控件单击！", Toast.LENGTH_SHORT).show();
                     callback.singleRealPlayClick(SingleRealPlayView.this);
                     break;
                 case MSG_SURFACEVIEW_DOUBLE_CLICK:
-                    Toast.makeText(getContext(), "预览控件双击！", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "控件双击！", Toast.LENGTH_SHORT).show();
                     View viewGroup = (View) getParent();
                     Log.e(TAG, "handleMessage: 预览界面双击 viewGroup scrollX=" + viewGroup.getScrollX() + " scrollY=" + viewGroup.getScrollY());
 //                    mScroller.startScroll(viewGroup.getScrollX(),viewGroup.getScrollY(),-viewGroup.getScrollX(),-viewGroup.getScrollY());
